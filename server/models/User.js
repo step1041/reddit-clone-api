@@ -15,6 +15,8 @@ const userSchema = new Schema({
         required: true,
         minlength: [8, 'Username must be 8 characters or more'],
     },
+    createdAt: {type: Date, default: Date.now},
+    isDeleted: {type: Boolean, default: false},
 });
 
 // Write some encryption here
